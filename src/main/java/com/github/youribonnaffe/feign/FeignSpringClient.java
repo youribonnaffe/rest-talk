@@ -33,7 +33,7 @@ public class FeignSpringClient {
     }
 
     interface PetStoreApi {
-        @GetMapping("/pet/findByStatus?status={status}")
+        @GetMapping("/pet/findByStatus")
         ResponseEntity<List<Pet>> findByStatus(@RequestParam("status") String status);
     }
 

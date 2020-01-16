@@ -2,8 +2,6 @@ package com.github.youribonnaffe.http;
 
 import org.apache.http.client.fluent.Request;
 import org.apache.http.client.fluent.Response;
-import org.apache.http.entity.ContentType;
-import org.apache.http.entity.StringEntity;
 
 import java.io.IOException;
 
@@ -13,9 +11,7 @@ public class Apache {
 
     public static void main(String[] args) throws IOException {
 
-        Response response = Request.Post(URL)
-                .addHeader("Authorization", "Bearer token")
-                .body(new StringEntity("{}", ContentType.APPLICATION_JSON))
+        Response response = Request.Get(URL)
                 .execute();
 
         System.out.println(response.returnContent().asString());

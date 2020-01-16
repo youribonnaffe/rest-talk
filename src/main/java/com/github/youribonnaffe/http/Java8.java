@@ -15,7 +15,9 @@ public class Java8 {
         HttpURLConnection connection = (HttpURLConnection) new URL(URL).openConnection();
 
         System.out.println(connection.getResponseCode());
+
         System.out.println(convertStreamToString(connection.getInputStream()));
+
     }
 
     static String convertStreamToString(InputStream is) {

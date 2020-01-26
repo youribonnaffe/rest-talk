@@ -8,22 +8,25 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class PetMarketPlaceInterfaceMockTest {
 
+    private static final List<PetMarketPlace.Pet> MOCKED_DATA = List.of(
+            new PetMarketPlace.Pet("Kitty", new PetMarketPlace.Pet.Category("Cats")),
+            new PetMarketPlace.Pet("Rintintin", new PetMarketPlace.Pet.Category("Dogs")),
+            new PetMarketPlace.Pet("Roi", new PetMarketPlace.Pet.Category("Lions"))
+    );
+
     @Test
     void onlyDomesticPetsAreReturned_apiMock() {
-        PetMarketPlace marketPlace = new PetMarketPlace(List.of(new PetMarketPlace.PetStoreApi() {
+
+        PetMarketPlace petMarketPlace = new PetMarketPlace(List.of(new PetMarketPlace.PetStoreApi() {
             @Override
             public List<PetMarketPlace.Pet> findByStatus(String status) {
-                return List.of(
-                        new PetMarketPlace.Pet("Kitty", new PetMarketPlace.Pet.Category("Cats")),
-                        new PetMarketPlace.Pet("Rintintin", new PetMarketPlace.Pet.Category("Dogs")),
-                        new PetMarketPlace.Pet("Roi", new PetMarketPlace.Pet.Category("Lions"))
-                );
+                return MOCKED_DATA;
             }
         }));
 
-        List<PetMarketPlace.Pet> domesticPets = marketPlace.findDomesticPets();
+        List<PetMarketPlace.Pet> pets = petMarketPlace.findDomesticPets();
 
-        assertEquals(2, domesticPets.size());
+        assertEquals(2, pets.size());
     }
 
 }

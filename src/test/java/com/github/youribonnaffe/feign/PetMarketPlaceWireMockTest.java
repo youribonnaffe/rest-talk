@@ -1,7 +1,6 @@
 package com.github.youribonnaffe.feign;
 
 import com.github.tomakehurst.wiremock.WireMockServer;
-import com.github.tomakehurst.wiremock.core.WireMockConfiguration;
 import feign.Logger;
 import feign.jackson.JacksonDecoder;
 import org.junit.jupiter.api.AfterEach;
@@ -20,9 +19,7 @@ class PetMarketPlaceWireMockTest {
 
     @BeforeEach
     void setUp() {
-        wireMockServer = new WireMockServer(WireMockConfiguration.options()
-                .port(0)
-                .withRootDirectory("."));
+        wireMockServer = new WireMockServer(0);
         wireMockServer.start();
     }
 

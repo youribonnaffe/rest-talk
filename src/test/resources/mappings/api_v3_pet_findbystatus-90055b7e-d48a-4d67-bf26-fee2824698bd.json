@@ -1,0 +1,24 @@
+{
+  "id" : "90055b7e-d48a-4d67-bf26-fee2824698bd",
+  "name" : "api_v3_pet_findbystatus",
+  "request" : {
+    "url" : "/api/v3/pet/findByStatus?status=available",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "[{\"id\":1,\"category\":{\"id\":2,\"name\":\"Cats\"},\"name\":\"Cat 1\",\"photoUrls\":[\"url1\",\"url2\"],\"tags\":[{\"id\":1,\"name\":\"tag1\"},{\"id\":2,\"name\":\"tag2\"}],\"status\":\"available\"},{\"id\":2,\"category\":{\"id\":2,\"name\":\"Cats\"},\"name\":\"Cat 2\",\"photoUrls\":[\"url1\",\"url2\"],\"tags\":[{\"id\":1,\"name\":\"tag2\"},{\"id\":2,\"name\":\"tag3\"}],\"status\":\"available\"},{\"id\":4,\"category\":{\"id\":1,\"name\":\"Dogs\"},\"name\":\"Dog 1\",\"photoUrls\":[\"url1\",\"url2\"],\"tags\":[{\"id\":1,\"name\":\"tag1\"},{\"id\":2,\"name\":\"tag2\"}],\"status\":\"available\"},{\"id\":7,\"category\":{\"id\":4,\"name\":\"Lions\"},\"name\":\"Lion 1\",\"photoUrls\":[\"url1\",\"url2\"],\"tags\":[{\"id\":1,\"name\":\"tag1\"},{\"id\":2,\"name\":\"tag2\"}],\"status\":\"available\"},{\"id\":8,\"category\":{\"id\":4,\"name\":\"Lions\"},\"name\":\"Lion 2\",\"photoUrls\":[\"url1\",\"url2\"],\"tags\":[{\"id\":1,\"name\":\"tag2\"},{\"id\":2,\"name\":\"tag3\"}],\"status\":\"available\"},{\"id\":9,\"category\":{\"id\":4,\"name\":\"Lions\"},\"name\":\"Lion 3\",\"photoUrls\":[\"url1\",\"url2\"],\"tags\":[{\"id\":1,\"name\":\"tag3\"},{\"id\":2,\"name\":\"tag4\"}],\"status\":\"available\"},{\"id\":10,\"category\":{\"id\":3,\"name\":\"Rabbits\"},\"name\":\"Rabbit 1\",\"photoUrls\":[\"url1\",\"url2\"],\"tags\":[{\"id\":1,\"name\":\"tag3\"},{\"id\":2,\"name\":\"tag4\"}],\"status\":\"available\"}]",
+    "headers" : {
+      "Date" : "Tue, 28 Jan 2020 18:54:39 GMT",
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Methods" : "GET, POST, DELETE, PUT",
+      "Access-Control-Allow-Headers" : "Content-Type, api_key, Authorization",
+      "Access-Control-Expose-Headers" : "Content-Disposition",
+      "Content-Type" : "application/json",
+      "Server" : "Jetty(9.4.9.v20180320)"
+    }
+  },
+  "uuid" : "90055b7e-d48a-4d67-bf26-fee2824698bd",
+  "persistent" : true,
+  "insertionIndex" : 1
+}
